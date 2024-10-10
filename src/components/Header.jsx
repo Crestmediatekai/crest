@@ -25,6 +25,7 @@ const Header = () => {
         hour: 'numeric',
         minute: '2-digit'
     });
+    const cleanTime = formattedTime.replace(/(AM|PM)/, '').trim();
 
     const formattedDate = time.toLocaleDateString('en-IN', {
         month: 'long',
@@ -32,12 +33,12 @@ const Header = () => {
     });
 
     return (
-        <div className="flex items-center bg-[#101010] rounded-[2.5rem] sm:rounded-[1.7rem] mt-10 sm:mt-7 justify-between mx-20 sm:mx-3 px-10 sm:px-5 relative">
+        <div className="flex items-center bg-[#101010] rounded-[2.5rem] sm:rounded-[1.7rem] mt-5 sm:mt-5 justify-between mx-20 sm:mx-3 px-10 sm:px-5 relative">
             <div>
                 <img src={LOGO} className="w-20 sm:w-10" alt="Company Logo" />
             </div>
             <div>
-                <div className="flex sm:items-center gap-3 sm:gap-1 mt-7 sm:mt-4 relative">
+                <div className="flex sm:items-center gap-3 sm:gap-1 relative">
                     <div className="relative group">
                         <img src={IMG1} className="rounded-full w-10 h-10 sm:w-5 sm:h-5 object-cover" alt="Image 1" />
                         <div className="flex flex-col items-center absolute bottom-0 left-1/2 w-48 transform -translate-x-1/2 translate-y-full invisible group-hover:visible bg-[#515151] text-[#FFFFFF] rounded-3xl shadow-lg after:content-[''] after:absolute after:top-0 after:left-1/2 after:transform after:-translate-x-1/2 after:-translate-y-full after:border-8 after:border-transparent after:border-b-[#515151]">
@@ -168,9 +169,9 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <span className="text-white text-4xl sm:text-lg">{formattedTime}</span>
+                    <span className="text-white text-4xl sm:text-lg">{cleanTime}</span>
                     <div className="flex flex-col text-sm sm:leading-3 sm:text-[0.43rem] sm:pt-1">
-                        <span className="text-white">{time.getHours() >= 12 ? 'pm' : 'am'}</span>
+                        <span className="text-white">{time.getHours() >= 12 ? 'PM' : 'AM'}</span>
                         <span className="text-white">{formattedDate}</span>
                     </div>
                 </div>

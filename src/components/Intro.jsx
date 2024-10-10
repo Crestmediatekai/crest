@@ -4,14 +4,18 @@ import IMG2 from "../assets/search-line.png";
 import IMG3 from "../assets/node-tree.png";
 import IMG4 from "../assets/table-fill.png";
 import IMG5 from "../assets/bar-chart-fill.png";
+import LottieAnimation from "./LottieAnimation";
 
 const Intro =   () => {
     return (
         <div className="px-28 sm:px-3 pt-20">
             <div className="flex gap-20 sm:gap-20 sm:flex-col items-center">
-                <div>
+                {/* <div>
                     <img src={INTRO} className="w-10/12 sm:w-10/12" alt="" />
-                </div>
+                </div> */}
+                <div className="hero-left">
+        <LottieAnimation />
+      </div>
                 <div className="text-6xl sm:text-3xl font-semibold w-7/12 sm:w-10/12 pb-12">
                     <span>Transforming ideas into interactive realities.</span>
                 </div>

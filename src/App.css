@@ -1,0 +1,14 @@
+/* App.css */
+.hero-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; 
+  }
+  
+  .lottie-container {
+    width: 350px;
+    height: 300px;
+  }
+  
