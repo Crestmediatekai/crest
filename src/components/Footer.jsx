@@ -1,3 +1,4 @@
+import React from 'react';
 import BALL from "../assets/basketball-line.png";
 import LOGO1 from "../assets/instagram-line.png";
 import LOGO2 from "../assets/linkedin-fill.png";
@@ -19,9 +20,15 @@ const Footer = () => {
                     <span>Privacy Policy</span>
                 </div>
                 <div className="flex gap-7 sm:gap-4">
-                    <img src={LOGO2} className="w-6 h-6 sm:w-4 sm:h-4" alt="" />
-                    <img src={LOGO1} className="w-6 h-6 sm:w-4 sm:h-4" alt="" />
-                    <img src={BALL} className="w-6 h-6 sm:w-4 sm:h-4" alt="" />
+                    <a href="https://www.linkedin.com/company/crestmediatek-ai-co-in/" target="_blank" rel="noopener noreferrer">
+                        <img src={LOGO2} className="w-6 h-6 sm:w-4 sm:h-4" alt="LinkedIn" />
+                    </a>
+                    <a href="https://www.instagram.com/crestmediatekai/" target="_blank" rel="noopener noreferrer">
+                        <img src={LOGO1} className="w-6 h-6 sm:w-4 sm:h-4" alt="Instagram" />
+                    </a>
+                    <a href="mailto:crestmediatekai.co.in@gmail.com">
+                        <img src={BALL} className="w-6 h-6 sm:w-4 sm:h-4" alt="Email" />
+                    </a>
                 </div>
             </div>
         </div>

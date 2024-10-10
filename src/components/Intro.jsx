@@ -1,23 +1,20 @@
-import INTRO from "../assets/intro.png";
+import { useState } from 'react';
+import LottieAnimation from "./LottieAnimation";
 import IMG1 from "../assets/85b7aa05ecd6e4a875ee2374f82f65f6.svg";
 import IMG2 from "../assets/search-line.png";
 import IMG3 from "../assets/node-tree.png";
 import IMG4 from "../assets/table-fill.png";
 import IMG5 from "../assets/bar-chart-fill.png";
-import LottieAnimation from "./LottieAnimation";
 
-const Intro =   () => {
+const Intro = () => {
     return (
         <div className="px-28 sm:px-3 pt-20">
-            <div className="flex gap-20 sm:gap-20 sm:flex-col items-center">
-                {/* <div>
-                    <img src={INTRO} className="w-10/12 sm:w-10/12" alt="" />
-                </div> */}
-                <div className="hero-left">
-        <LottieAnimation />
-      </div>
-                <div className="text-6xl sm:text-3xl font-semibold w-7/12 sm:w-10/12 pb-12">
-                    <span>Transforming ideas into interactive realities.</span>
+            <div className="flex gap-20 sm:gap-20 sm:flex-col items-center justify-end">
+                <div className="hero-left w-5/12 sm:w-full">
+                    <LottieAnimation />
+                </div>
+                <div className="text-6xl sm:text-3xl font-semibold w-7/12 sm:w-10/12 pb-12 text-right">
+                    <span className="inline-block">Transforming ideas into interactive realities.</span>
                 </div>
             </div>
             <div className="pt-20 sm:pt-2 flex sm:flex-col gap-44">
@@ -110,7 +107,7 @@ const Intro =   () => {
                         <div className="pl-8 text-sm sm:text-xs">
                             <span>
                                 This stage helps to get insights into the product, conducting
-                                market research, analyzing the competitors, identifying users&apos;
+                                market research, analyzing the competitors, identifying users'
                                 pain points, and determining the analysis plan.
                             </span>
                         </div>
@@ -158,11 +155,10 @@ const Intro =   () => {
                             </span>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
 export default Intro;

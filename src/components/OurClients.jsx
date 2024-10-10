@@ -2,6 +2,8 @@ import PHOTO1 from "../assets/amaarah.jpg";
 import PHOTO2 from "../assets/amplux.png";
 import PHOTO3 from "../assets/netmas.png";
 import PHOTO4 from "../assets/securetech.png";
+import TECH from "../assets/tech.jpg";
+import UDAAN from "../assets/udaan.png";
 
 const OurClients = () => {
     return (
@@ -16,14 +18,18 @@ const OurClients = () => {
                 </span>
             </div>
             <div className="flex gap-72 sm:gap-20 sm:flex-col">
-                <div className="flex flex-col gap-40 sm:gap-24">
-                    <div className="flex gap-40 sm:gap-28">
-                        <img src={PHOTO2} className="w-[6rem]" alt="" />
-                        <img src={PHOTO3} className="w-[5rem]" alt="" />
+                <div className="flex flex-col gap-32 sm:gap-20">
+                    {/* First row of logos */}
+                    <div className="flex gap-32 sm:gap-24 items-center">
+                        <img src={PHOTO2} className="w-[6rem]" alt="Amplux logo" />
+                        <img src={PHOTO3} className="w-[5rem]" alt="Netmas logo" />
+                        <img src={TECH} className="w-[7rem] sm:w-[6rem]" alt="Tech logo" />
                     </div>
-                    <div className="flex gap-40 sm:gap-32">
-                        <img src={PHOTO4} className="w-[5.5rem]" alt="" />
-                        <img src={PHOTO1} className="w-[4.5rem] h-[4.5rem]" alt="" />
+                    {/* Second row of logos */}
+                    <div className="flex gap-32 sm:gap-24 items-center">
+                        <img src={PHOTO4} className="w-[5.5rem]" alt="Securetech logo" />
+                        <img src={PHOTO1} className="w-[4.5rem] h-[4.5rem]" alt="Amaarah logo" />
+                        <img src={UDAAN} className="w-[7rem] sm:w-[6rem]" alt="Udaan logo" />
                     </div>
                 </div>
                 <div className="w-2/6 xl:w-5/6 sm:w-full flex flex-col gap-6">
@@ -52,12 +58,14 @@ const OurClients = () => {
                             <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Apparel</li>
                             <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Fashion</li>
                             <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Edtech</li>
+                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Software</li>
+                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Startups</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    )   
+    );
 };
 
-export default OurClients;
+export default OurClients;  
