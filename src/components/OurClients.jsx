@@ -1,3 +1,4 @@
+import React from 'react';
 import PHOTO1 from "../assets/amaarah.jpg";
 import PHOTO2 from "../assets/amplux.png";
 import PHOTO3 from "../assets/netmas.png";
@@ -6,60 +7,55 @@ import TECH from "../assets/tech.jpg";
 import UDAAN from "../assets/udaan.png";
 
 const OurClients = () => {
+    const clients = [
+        { src: PHOTO2, alt: "Amplux logo", className: "w-24 h-auto" },
+        { src: PHOTO3, alt: "Netmas logo", className: "w-20 h-auto" },
+        { src: TECH, alt: "Tech logo", className: "w-28 h-auto" },
+        { src: PHOTO4, alt: "Securetech logo", className: "w-22 h-auto" },
+        { src: PHOTO1, alt: "Amaarah logo", className: "w-18 h-18" },
+        { src: UDAAN, alt: "Udaan logo", className: "w-28 h-auto" },
+    ];
+
+    const businessDomains = [
+        "Cables", "Tech", "Jewellery", "Medicine", "Healthcare & Fitness",
+        "Digital", "E-commerce", "Designs", "Business", "Apparel",
+        "Fashion", "Edtech", "Software", "Startups"
+    ];
+
     return (
-        <div className="px-60 xl:px-28 sm:px-10 py-20">
-            <div className="flex flex-col gap-5 sm:gap-2 pb-10">
-                <span className="font-inter uppercase text-xs sm:text-[0.6rem] font-semibold">We made design for</span>
-                <span className="text-5xl sm:text-3xl font-bold font-inter">Our clients</span>
-                <span className="font-inter text-[0.6rem] sm:text-[0.55rem] w-1/4 sm:w-full">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-28 py-12 md:py-20">
+            <div className="flex flex-col gap-3 md:gap-5 pb-8 md:pb-10">
+                <span className="font-inter uppercase text-xs font-semibold">We made design for</span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-inter">Our clients</h2>
+                <p className="font-inter text-sm md:text-base lg:w-3/4 xl:w-1/2">
                     We are working with a diverse range of clients, spanning
                     from globally renowned entities with millions of users to
                     innovative startups seeking for MVP design solutions.
-                </span>
+                </p>
             </div>
-            <div className="flex gap-72 sm:gap-20 sm:flex-col">
-                <div className="flex flex-col gap-32 sm:gap-20">
-                    {/* First row of logos */}
-                    <div className="flex gap-32 sm:gap-24 items-center">
-                        <img src={PHOTO2} className="w-[6rem]" alt="Amplux logo" />
-                        <img src={PHOTO3} className="w-[5rem]" alt="Netmas logo" />
-                        <img src={TECH} className="w-[7rem] sm:w-[6rem]" alt="Tech logo" />
-                    </div>
-                    {/* Second row of logos */}
-                    <div className="flex gap-32 sm:gap-24 items-center">
-                        <img src={PHOTO4} className="w-[5.5rem]" alt="Securetech logo" />
-                        <img src={PHOTO1} className="w-[4.5rem] h-[4.5rem]" alt="Amaarah logo" />
-                        <img src={UDAAN} className="w-[7rem] sm:w-[6rem]" alt="Udaan logo" />
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                <div className="flex flex-col gap-12 md:gap-16">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+                        {clients.map((client, index) => (
+                            <img key={index} src={client.src} className={client.className} alt={client.alt} />
+                        ))}
                     </div>
                 </div>
-                <div className="w-2/6 xl:w-5/6 sm:w-full flex flex-col gap-6">
-                    <div className="flex flex-col gap-5 sm:gap-2">
-                        <div className="text-3xl sm:text-xl font-bold font-inter">
-                            <span>Business domains</span>
-                        </div>
-                        <div className="text-[0.8rem] sm:text-[0.6rem] sm:pr-3">
-                            <span>
-                                We boast extensive experience with products and projects
-                                across various business niches, including:
-                            </span>
-                        </div>
+                <div className="lg:w-2/5 flex flex-col gap-6">
+                    <div className="flex flex-col gap-3">
+                        <h3 className="text-2xl md:text-3xl font-bold font-inter">Business domains</h3>
+                        <p className="text-sm md:text-base">
+                            We boast extensive experience with products and projects
+                            across various business niches, including:
+                        </p>
                     </div>
                     <div>
-                        <ul className="flex flex-wrap uppercase gap-2 text-[0.55rem] font-medium">
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Cables</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Tech</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Jewellery</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Medicine</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Healthcare & Fitness</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Digital</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">E-commerce</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Designs</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Business</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Apparel</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Fashion</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Edtech</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Software</li>
-                            <li className="border border-black rounded-full px-6 sm:px-3 py-2.5 sm:py-1.5">Startups</li>
+                        <ul className="flex flex-wrap gap-2 text-xs font-medium">
+                            {businessDomains.map((domain, index) => (
+                                <li key={index} className="border border-black rounded-full px-3 py-1.5 uppercase">
+                                    {domain}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -68,4 +64,4 @@ const OurClients = () => {
     );
 };
 
-export default OurClients;  
+export default OurClients;
