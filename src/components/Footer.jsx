@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-between w-9/12 xl:w-10/12 sm:w-10/12 mb-14 pb-5">
                 <div className="text-xs sm:text-[0.53rem] font-normal font-inter flex gap-4 sm:gap-2">
-                    <span>© 2024 CrestMediaTekAi</span>
+                    <span>© 2025 CrestMediaTekAi</span>
                     <span>Privacy Policy</span>
                 </div>
                 <div className="flex gap-7 sm:gap-4">
