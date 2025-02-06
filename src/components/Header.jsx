@@ -142,7 +142,7 @@ const Header = () => {
                         showPortfolio={true}
                         index={0}
                     />
-                    <SocialCard 
+{/*                     <SocialCard 
                         image={IMG2}
                         name="Sumir Singh"
                         role="Paid ads & Web developer"
@@ -151,7 +151,7 @@ const Header = () => {
                         email=""
                         showPortfolio={true}
                         index={1}
-                    />
+                    /> */}
                     <SocialCard 
                         image={IMG3}
                         name="Harshit Chaudhary"
@@ -162,7 +162,7 @@ const Header = () => {
                         showPortfolio={true}
                         index={2}
                     />
-                    <SocialCard 
+{/*                     <SocialCard 
                         image={IMG4}
                         name="Yash Mudotiya"
                         role="Co-founder & Client SEO Lead"
@@ -171,7 +171,7 @@ const Header = () => {
                         email="sharyash1101@gmail.com"
                         showPortfolio={true}
                         index={3}
-                    />
+                    /> */}
                     <span className="text-white text-4xl sm:text-lg">{formattedTime}</span>
                     <div className="flex flex-col text-sm sm:leading-3 sm:text-[0.43rem] sm:pt-1">
                         <span className="text-white">{time.getHours() >= 12 ? 'pm' : 'am'}</span>
